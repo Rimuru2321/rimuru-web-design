@@ -1,0 +1,251 @@
+   :root{
+      --bg:#0b0b0f;
+      --panel:#14141a;
+      --red:#e53935; /* rojo japonés */
+      --white:#ffffff;
+      --muted:#9a9a9a;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Noto Serif JP', serif;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--white);
+      line-height:1.6;
+    }
+
+    header{
+      padding:80px 20px;
+      text-align:center;
+      background:
+        radial-gradient(circle at center, #1a1a1a 0%, #0b0b0f 70%);
+    }
+
+    .logo-text{
+      font-size:2.6rem;
+      letter-spacing:3px;
+    }
+
+    .logo-text span{
+      color:var(--red);
+    }
+
+    .kanji{
+      display:block;
+      margin-top:10px;
+      font-size:1.1rem;
+      color:var(--muted);
+      letter-spacing:2px;
+    }
+
+    header p{
+      margin-top:20px;
+      color:var(--muted);
+      font-size:1.1rem;
+    }
+
+    .social{
+      margin-top:35px;
+    }
+
+    .social a{
+      display:inline-block;
+      margin:6px;
+      padding:12px 26px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      color:white;
+      transition:.3s;
+    }
+
+    .ig{ background:#833ab4; }
+    .wa{ background:var(--red); }
+
+    .social a:hover{
+      transform:scale(1.05);
+    }
+
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:60px 20px;
+    }
+
+    h2{
+      margin-bottom:30px;
+      border-left:4px solid var(--red);
+      padding-left:15px;
+      font-size:1.8rem;
+    }
+
+    .box{
+      background:var(--panel);
+      padding:30px;
+      border-radius:12px;
+    }
+
+    .services, .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:var(--panel);
+      padding:25px;
+      border-radius:12px;
+      border:1px solid #1f1f2a;
+    }
+
+    .card h3{
+      color:var(--red);
+      margin-bottom:10px;
+    }
+
+    .project img{
+      width:100%;
+      display:block;
+      border-radius:12px 12px 0 0;
+    }
+
+    .project div{
+      padding:15px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    /* Animación de entrada */
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulso suave continuo */
+@keyframes logoPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229,57,53,0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(229,57,53,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229,57,53,0);
+  }
+}
+
+/* Contenedor del logo */
+.logo-img{
+  display:inline-block;
+  padding:10px;
+  border-radius:50%;
+  border:4px solid var(--red);
+  background:#e8e8e8;
+
+  animation:
+    logoFadeIn 1.2s ease-out,
+    logoPulse 3.5s ease-in-out infinite;
+
+  transition: transform 0.4s ease;
+}
+
+/* Imagen del logo */
+.logo-img img{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+/* Hover (PC) */
+.logo-img:hover{
+  transform: scale(1.05);
+}
+
+/* ====== SECCIÓN PROYECTOS ====== */
+section {
+  padding: 4rem 1.5rem;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* CONTENEDOR */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.project.card {
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  transition: transform .35s ease, box-shadow .35s ease;
+  cursor: pointer;
+}
+
+/* HOVER CARD */
+.project.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(255,0,0,.25);
+}
+
+/* IMAGEN */
+.project.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  transition: transform .45s ease, filter .45s ease;
+}
+
+/* HOVER IMAGEN */
+.project.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.project.card {
+  position: relative;
+}
+
+/* Overlay + borde suave */
+.project.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 0, 0, 0);
+  pointer-events: none; /* CLAVE para no bloquear clics */
+  transition: border 0.35s ease;
+}
+
+.project.card:hover::after {
+  border: 1px solid rgba(255, 0, 0, 0.35);
+}
