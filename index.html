@@ -2,18 +2,46 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Rimuru Web & Design | Diseño Web Japonés</title>
+  <title>Rimuru Web & Design | Diseño Web Profesional en República Dominicana</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
-  <link rel="stylesheet" href="css/portafolio.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Rimuru Web & Design crea páginas web modernas con estética japonesa, optimizadas para Instagram y negocios digitales.">
-  <meta name="keywords" content="diseño web, paginas web, diseño web japonés, rimuru web design">
+  <meta name="description" content="Rimuru Web & Design crea páginas web profesionales estilo japonés. Landing pages, webs empresariales, tiendas online y aplicaciones web en República Dominicana.">
+  <meta name="keywords" content="diseño web RD, paginas web republica dominicana, landing page, tienda online, aplicaciones web, Rimuru Web Design">
   <meta name="author" content="Rimuru Web & Design">
+
+  <!-- Open Graph (Facebook, WhatsApp, Instagram) -->
+  <meta property="og:title" content="Rimuru Web & Design | Diseño Web Profesional">
+  <meta property="og:description" content="Creamos páginas web modernas, tiendas online y aplicaciones web con estética japonesa en República Dominicana.">
+  <meta property="og:image" content="https://rimuru2321.github.io/rimuru-web-design/img/logo-rimuru.jpg">
+  <meta property="og:url" content="https://rimuru2321.github.io/rimuru-web-design/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portafolio.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
 <header>
+
+  <!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+  <!-- INTRO CINEMATOGRÁFICA -->
+<div id="intro">
+  <div class="intro-content">
+    <h1>Rimuru Web & Design</h1>
+    <p>和の美学 • Modern Digital Power</p>
+  </div>
+</div>
+
+  <!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader-circle"></div>
+  <p>読み込み中...</p>
+</div>
+
   <div class="logo-img">
     <img src="img/logo-rimuru.jpg" alt="Rimuru Web & Design">
   </div>
@@ -81,12 +109,52 @@
   </div>
 </section>
 
+<section>
+  <h2>Planes y Precios</h2>
+  <div class="services">
+
+    <div class="card">
+      <h3>Plan Sakura</h3>
+      <p>Landing Page Profesional</p>
+      <strong>$100 USD</strong>
+    </div>
+
+    <div class="card">
+      <h3>Plan Samurai</h3>
+      <p>Web Empresarial Completa</p>
+      <strong>$280 USD</strong>
+    </div>
+
+    <div class="card">
+      <h3>Plan Shogun</h3>
+      <p>E-commerce o Aplicación Web</p>
+      <strong>$550+ USD</strong>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Solicita tu Cotización</h2>
+  <div class="box">
+    <form id="contact-form">
+      <input type="text" name="user_name" placeholder="Tu Nombre" required>
+      <input type="email" name="user_email" placeholder="Tu Email" required>
+      <textarea name="message" placeholder="Cuéntanos tu proyecto..." required></textarea>
+      <button type="submit">Enviar Solicitud</button>
+    </form>
+  </div>
+</section>
+
+
 <footer class="footer">
   <p>
     © 2026 Rimuru Web & Design. Todos los derechos reservados.
   </p>
 </footer>
 
+<!-- Botón volver arriba -->
+<button id="backTop">⬆</button>
+
 </body>
 </html>
-
